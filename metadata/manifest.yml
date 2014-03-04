@@ -1,17 +1,17 @@
-Name: jelasticbasic
-Cartridge-Short-Name: JELASTICBASIC
-Display-Name: JELASTICBASIC
-Description: "Jelastic basic webserver cartrodge"
-Version: '1.0'
-License: No Licence
+Name: jetty8
+Cartridge-Short-Name: JETTY8
+Display-Name: JETTY8
+Description: "Jelastic Jetty8"
+Version: '8.14'
+License: 'Apache licence'
 License-Url: 
-Vendor: Jelastic
-Cartridge-Version: 1.0
-Cartridge-Vendor: jelasticbasic
+Vendor: Eclipse
+Cartridge-Version: 8.14
+Cartridge-Vendor: Jelastic
 Categories:
   - service
   - embedded
-Source-Url: https://github.com/ihorman/openshift-jelastic-basic-cartridge.git
+Source-Url: https://github.com/ihorman/openshift-jelastic-jetty8.git
 Website: http://jelastic.com/
 Help-Topics:
   "Developer Center": https://jelastic.com
@@ -32,7 +32,7 @@ Cart-Data:
     Type: environment
     Description: "Unique ID which identified the gear. This value changes between gears."
 Provides:
-  - jelasticbasic
+  - jetty8
 Scaling:
   Min: 1
   Max: 1
