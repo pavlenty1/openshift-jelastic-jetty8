@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ${OPENSHIFT_JETTY_DIR}
+cd ${OPENSHIFT_JETTY8_DIR}/versions/8.14/
 
 CMD="java -Xms384m -Xmx412m -jar start.jar -Djetty.host=$OPENSHIFT_JETTY8_APP_IP -Djetty.port=$OPENSHIFT_JETTY8_APP_PORT"
 
