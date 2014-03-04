@@ -1,0 +1,15 @@
+#!/bin/bash
+ 
+function run {
+ curl --silent -L https://raw.github.com/openshift-quickstart/jetty-openshift-quickstart/master/$1.sh | grep -v "export JAVA_HOME" | grep -v "JETTY_VERSION=\"8.1.11.v20130520" | bash
+ wait
+}
+export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.60-2.4.5.0.fc19.x86_64/"
+export JETTY_VERSION="8.1.14.v20131031"
+
+run "setup"
+run "build"
+run "start"
+
+
+
