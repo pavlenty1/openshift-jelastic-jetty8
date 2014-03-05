@@ -9,7 +9,6 @@ function _deploy(){
             then
                 rm -fr ${WEBROOT}/$context;
         fi
-        echo "$WEBROOT - XXXXXX"
         $WGET --no-check-certificate --content-disposition -O "${WEBROOT}/${context}.war" "$package_url";
 }
 
