@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 
 # Simple deploy and undeploy scenarios for Jetty8
 
