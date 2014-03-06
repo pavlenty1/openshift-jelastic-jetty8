@@ -3,14 +3,12 @@
 # Simple deploy and undeploy scenarios for Jetty8
 
 WGET=$(which wget);
+[ "x${context}" == "xROOT" ] && context="root";
 
 function _deploy(){
-        [ "x${context}" == "xROOT" ] && context="root";
-        if [ -e "${WEBROOT}/$context" ]
-        then
+        [ -e "${WEBROOT}/$context" ] && { 
                 rm -fr ${WEBROOT}/$context;
-        fi
-        $WGET --no-check-certificate --content-disposition -O "${WEBROOT}/${context}.war" "$package_url";
+                $WGET --no-check-certificate --content-disposition -O "${WEBROOT}/${context}.war" "$package_url";
 }
 
 function _undeploy(){
