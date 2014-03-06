@@ -5,8 +5,9 @@
 WGET=$(which wget);
 
 function _deploy(){
+        [ "x${context}" == "xROOT" ] && context="root";
         if [ -e "${WEBROOT}/$context" ]
-            then
+        then
                 rm -fr ${WEBROOT}/$context;
         fi
         $WGET --no-check-certificate --content-disposition -O "${WEBROOT}/${context}.war" "$package_url";
