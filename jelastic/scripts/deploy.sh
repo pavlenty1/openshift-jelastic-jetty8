@@ -6,14 +6,12 @@ WGET=$(which wget);
 [ "x${context}" == "xROOT" ] && context="root";
 
 function _deploy(){
-        [ -f "${WEBROOT}/${context}.war" ] && {
-                rm -f "${WEBROOT}/${context}.war";
-                $WGET --no-check-certificate --content-disposition -O "${WEBROOT}/${context}.war" "$package_url";
-                }
+     [ -f "${WEBROOT}/${context}.war" ] &&  rm -f "${WEBROOT}/${context}.war";
+     $WGET --no-check-certificate --content-disposition -O "${WEBROOT}/${context}.war" "$package_url";
 }
 
 function _undeploy(){
-        [ -f "${WEBROOT}/${context}.war" ] && rm -f "${WEBROOT}/${context}.war";
+     [ -f "${WEBROOT}/${context}.war" ] && rm -f "${WEBROOT}/${context}.war";
 }
 
 
