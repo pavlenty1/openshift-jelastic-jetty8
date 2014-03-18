@@ -2,16 +2,16 @@ Name: jetty8
 Cartridge-Short-Name: JETTY8
 Display-Name: JETTY8
 Description: "Jelastic Jetty8"
-Version: '8.14'
+Version: '8.15'
 License: 'Apache licence'
 License-Url: 
 Vendor: Eclipse
-Cartridge-Version: 8.14
+Cartridge-Version: 8.15
 Cartridge-Vendor: Jelastic
 Categories:
   - service
   - embedded
-Source-Url: https://github.com/ihorman/openshift-jelastic-jetty8.git
+Source-Url: https://github.com/pavlenty1/penshift-jelastic-jetty8.git
 Website: http://jelastic.com/
 Help-Topics:
   "Developer Center": https://jelastic.com
